@@ -1,0 +1,95 @@
+body {
+  background: #000;
+  color: white;
+}
+
+.navbar-brand {
+  font-family: 'Spicy Rice', cursive;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-family: 'Spicy Rice', cursive;
+}
+
+header img {
+  width: 60%;
+}
+
+.container {
+  box-shadow: 0 0 50px #0ef;
+}
+
+.card-body {
+  box-shadow: 0 0 50px #ff00ea;
+  overflow: hidden; 
+}
+
+img {
+  box-shadow: 0 0 50px #ff00ea;
+  border-radius: 50%;
+  overflow: hidden; 
+}
+
+img:hover {
+  animation: animate 1s linear infinite;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5em;
+  letter-spacing: .1em;
+  color: #0ef;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid #0ef;
+  padding: 10px 30px;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 1s, box-shadow 1s;
+}
+
+.btn:hover {
+  transition-delay: 0s, 0s;
+  color: #ff00ea;
+  box-shadow: 
+      0 0 10px #ff00ea,
+      0 0 20px #ff00ea,
+      0 0 40px #ff00ea,
+      0 0 80px #ff00ea,
+      0 0 160px #ff00ea;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 0%;
+  height: 100%;
+  background: #0ef;
+  transform: skewX(35deg);
+  z-index: -1;
+  transition: 1s;
+}
+
+.btn:hover:before {
+  width: 100%;
+}
+
+.bg-dark {
+  box-shadow: 0 0 50px #0ef;
+  overflow: hidden;
+}
+
+.bg-dark:hover {
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  100% {
+  filter: hue-rotate(360deg); 
+  }
+}
